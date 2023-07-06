@@ -2,8 +2,8 @@ apiVersion : apps/v1
 kind: Deployment
 
 metadata:
-  name: gitea-deployment
-  namespace: gitea-service
+  name: gitea
+  namespace: default
 spec:
   replicas: 3
 
@@ -19,7 +19,6 @@ spec:
       containers:
         - name: gitea
           image: gitea/gitea
-          imagePullPolicy: Never
           ports:
             - containerPort: 3000
           env:
