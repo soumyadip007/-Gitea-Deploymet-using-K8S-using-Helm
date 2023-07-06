@@ -45,6 +45,11 @@ helm uninstall helm
 4. To view the rendered Helm chart without installing, use the following command:
 helm template helm ./helm --debug
 
+5. Release : helm package ./gitea 
+
+6. Indexing : helm repo index ./gitea
+
+
 ## Important Note (minikube)
 
 If you are using minikube, make sure to run the following command before deploying Gitea:
