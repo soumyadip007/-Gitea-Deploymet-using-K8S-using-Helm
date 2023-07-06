@@ -2,8 +2,8 @@ apiVersion : apps/v1
 kind: Deployment
 
 metadata:
-  name: gitea
-  namespace: default
+  name: gitea-deployment
+  namespace: gitea-ns
 spec:
   replicas: 3
 

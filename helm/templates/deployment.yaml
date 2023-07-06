@@ -1,0 +1,26 @@
+apiVersion : apps/v1
+kind: Deployment
+
+metadata:
+  name: {{ .Values.gitea.deployment.name }}
+  namespace: {{ .Values.gitea.namespace.name }}
+spec:
+  replicas: {{ .Values.gitea.replicas }}
+
+  selector:
+    matchLabels:
+      server: {{ .Values.gitea.name }}
+
+  template:
+    metadata:
+      labels:
+        server: {{ .Values.gitea.name }}
+    spec:
+      containers:
+        - name: {{ .Values.gitea.name }}
+          image: {{ .Values.gitea.image.name }}
+          ports:
+            - containerPort: {{ .Values.gitea.image.port }}
+          env:
+            - name: NODE_ENV
+              value: production
