@@ -9,21 +9,13 @@ To deploy Gitea, follow these steps:
 1. Apply the deployment manifest:
 kubectl apply -f ./valina-k8s/deployment.yaml
 
-markdown
-
-
 2. Apply the service manifest:
 kubectl apply -f ./valina-k8s/service.yaml
-
-markdown
-
 
 3. Verify the deployment and service:
 kubectl get deployments -n gitea-ns
 kubectl get services -n gitea-ns
 kubectl get deployments -n gitea-ns
-
-arduino
 
 
 ## Clean Up
@@ -31,16 +23,11 @@ arduino
 To delete the Gitea deployment, run the following command:
 kubectl delete deployment gitea-deployment
 
-bash
-
 
 ## Running Gitea Locally (Optional)
 
 If you want to run Gitea locally without Kubernetes, you can use the following command:
 docker run -p 3000:3000 gitea/gitea
-
-yaml
-
 
 ## Helm Charts (Optional)
 
