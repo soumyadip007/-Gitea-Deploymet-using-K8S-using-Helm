@@ -21,7 +21,7 @@ kubectl get deployments -n gitea-ns
 ## Clean Up
 
 To delete the Gitea deployment, run the following command:
-kubectl delete deployment gitea-deployment
+kubectl delete deployment gitea-deployment -n gitea-ns && kubectl delete service gitea-service -n gitea-ns && kubectl delete namespace gitea-ns
 
 
 ## Running Gitea Locally (Optional)

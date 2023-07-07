@@ -8,6 +8,17 @@ metadata:
   labels:
     name: gitea-ns
 ---
+# Source: gitea/templates/config.yaml
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: gitea
+  labels:
+    app: gitea
+data:
+  Name:  gitea
+  Env: Dev
+---
 # Source: gitea/templates/service.yaml
 apiVersion: v1
 kind: Service

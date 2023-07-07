@@ -18,3 +18,10 @@ gitea:
 
   namespace:
     name: gitea-ns
+
+  env : Dev
+
+serviceAccount:
+  create: false
+  annotations: {}
+  name: "gitea"
